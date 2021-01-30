@@ -1,29 +1,14 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-01-31 03:45:34 +0900
-categories: jekyll update
+title:  "✨ 블로그 다시 시작"
+date:   2021-01-31 04:01:23 +0900
+categories: personal
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+블로그 다시 시작했다. jekyll로 썼다가, 한번 [velog](https://velog.io) 로 갔다가, 다시 jekyll로 왔다. 블로그 테마 등에 신경을 쓰고 싶지 않아서 벨로그로 갔었는데, 거기서 할 수 있는게 그렇게 많지 않아서 여기로 다시 왔다. 사실 디자인 신경 쓰고 싶지 않다면 여기만큼 자유롭게 쓸 수 있는 곳도 많이 없다.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+기존 블로그랑은 좀 테마가 달라질 거 같아서, 기존 블로그 내용은 조금 정리해서 옮기려고 한다. 기존에는 내가 정보 전달을 해야 한다는 강박에 빠져 있던 거 같은데, 이젠 안 그럴거다. 한 주에 한번이라도 내가 해결했던 문제들이나 궁금해 했던 것들을 정리할 예정이다. 확실한 원인이 안 올라올 수도 있다. 쌓아두고 있다가 나중에 확실하게 알게 되거나, 실험을 할 여유가 생기면 실험해서 채워넣을 생각이다.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+디자인은 나중에.. 진짜 나중에. 연말이나 되어서 시간적 여유를 가지고 할 생각이다. 디자인도 각 잡고 해볼 생각이고. 저번에 두들처럼 했다가 별로 맘에 안 들어서 테마를 다 날렸다. 애매한 찍먹은 맘에 안 들어서 그냥 이대로 둘 거 같다.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+대신 해시태그나 카테고리 같은 것만 조금 설정해 두어야겠다. 다시 블로그 시작!
