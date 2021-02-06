@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "📚 CS224n"
+title:  "📚 CS224n 01 - Word2Vector"
 date:   2021-02-07 12:36:00 +0900
 categories: study
 ---
