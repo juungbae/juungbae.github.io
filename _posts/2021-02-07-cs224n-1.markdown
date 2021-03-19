@@ -3,6 +3,7 @@ layout: post
 title:  "📚 CS224n 01 - Word2Vector"
 date:   2021-02-07 12:36:00 +0900
 categories: study
+use_math: true
 ---
 
 
@@ -23,9 +24,9 @@ categories: study
 그래서 나온 방식이 `One-hot encoding` 이다. 그냥 간단하게 설명하자면.. 3개의 단어가 있을 때
 
 $$
-W_1 = [\ 1,\ 0,\ 0\ ] \newline
-W_2 = [\ 0,\ 1,\ 0\ ] \newline
-W_3 = [\ 0,\ 0,\ 1\ ] \newline
+W_1 = [\ 1,\ 0,\ 0\ ] \\
+W_2 = [\ 0,\ 1,\ 0\ ] \\
+W_3 = [\ 0,\ 0,\ 1\ ] \\
 $$
 
 뭐 이렇게 단어를 표기하는 것이다. 벡터 전체에 1이 하나밖에 없어서 `One-hot Encoding` 이라고 한다. 간단하게 단어를 수치화할 수 있다는 장점이 있지만, 두 단어간의 유사도를 계산할 방법이 없다. 사실 이렇게 일일히 하지 말고, 단어가 단어끼리 알아서 서로간의 유사도를 찾게 하는 방법은 없을까? 
@@ -44,9 +45,13 @@ NLP의 핵심 아이디어 중 하나. 특정 단어의 의미는, **같이 자�
 
 이때 워드벡터의 likelihood와 cost function은 다음과 같다
 
-$$L(\theta) = \prod_{t=1}^{T}\prod_{-m \le j \le m} P(w_{t+j}|w_t;\theta)$$
+$$
+L(\theta) = \prod_{t=1}^{T}\prod_{-m \le j \le m} P(w_{t+j}|w_t;\theta)
+$$
 
-$$J(\theta) = -\frac{1}{T}\sum_{t=1}^{T}\sum_{-m\le j\le m} \log P(w_{t+j}|w_t;\theta)$$
+$$
+J(\theta) = -\frac{1}{T}\sum_{t=1}^{T}\sum_{-m\le j\le m} \log P(w_{t+j}|w_t;\theta)
+$$
 
 이 때, 특정 단어 $w$에 대해 Word2Vec은 두가지 벡터를 갖는다.
 
@@ -55,9 +60,11 @@ $$J(\theta) = -\frac{1}{T}\sum_{t=1}^{T}\sum_{-m\le j\le m} \log P(w_{t+j}|w_t;\
 
 이 때 컨텍스트 단어 o와 중심 단어 c에 대해
 
-$$P(o|c) = \frac{\exp(u_o^Tv_c)}{\sum_{w \in V} \exp(u_w^Tv_c)}$$
+$$
+P(o|c) = \frac{\exp(u_o^Tv_c)}{\sum_{w \in V} \exp(u_w^Tv_c)}
+$$
 
-이다. ( 형태를 보면 $\mathbb{R} \rarr (0, 1)^n$  인 Softmax function과 유사하다 )
+이다. ( 형태를 보면 $\mathbb{R} \rightarrow (0, 1)^n$  인 Softmax function과 유사하다 )
 
 ### Gradient Descent
 
@@ -66,7 +73,9 @@ $$P(o|c) = \frac{\exp(u_o^Tv_c)}{\sum_{w \in V} \exp(u_w^Tv_c)}$$
 
 결국 우리의 목표는 loss function의 값을 최소화 하는 것이다. 완벽한 해를 찾기가 어렵기 때문에, 대개 다음과 같은 방법을 쓰곤 한다. 변화량을 계산하여 빼는 과정을 반복하면서 최소값을 찾아나가는 과정이다.
 
-$$\theta^{new} = \theta^{old} - \alpha \nabla_{\theta}J(\theta)$$
+$$
+\theta^{new} = \theta^{old} - \alpha \nabla_{\theta}J(\theta)
+$$
 
 문제는, 여기 이 $J(\theta)$ 가 말뭉치 전체에 관한 함수이기 때문에, $\nabla_{\theta}J(\theta)$ 함수의 계산 비용은 어마어마하다. 그래서 윈도우를 샘플링해서 계산 속도를 빠르게 하는 방법이 있다. 물론 성능이 좋지는 않다.
 
