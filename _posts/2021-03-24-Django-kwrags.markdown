@@ -3,6 +3,7 @@ layout: post
 title:  "🐍 Django에서 새로운 kwargs를 갖는 모델 필드 만들기 "
 date:   2021-03-24 01:02:00 +0900
 categories: bug
+tags: [python, django]
 ---
 
 faker 등을 이용한 테스트까지는 잘 될지 모르겠지만, 장고의 `makemigration` 명령어를 실행할 때 오류가 발생함. 
